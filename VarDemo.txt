@@ -1,0 +1,12 @@
+class VariableType
+{
+  int a=10;
+  static int b=200;
+}
+public class VarDemo
+{
+public staric void main(String []args)
+{
+  System.out.println("Static variable is "+
+}
+}

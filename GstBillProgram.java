@@ -1,0 +1,10 @@
+public class GstBillProgram{
+   public static void main(String r[]){
+       int qty= Integer.parseInt(r[0]);
+       int rate =Integer.parseInt(r[1]);
+       int total=qty*rate;
+       int gstAmt = total*18/100;
+       total +=gstAmt;
+	System.out.printf("The total amount is the %d " , total);
+}
+} 

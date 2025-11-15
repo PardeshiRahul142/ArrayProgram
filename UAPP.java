@@ -1,19 +1,19 @@
+import java.util.*;
 class A
-{  
-   private A()
-   { System.out.println("I am private constructor of A");
-   }
-   public static void display()
-   { System.out.println("I am static method of display");
-   }
-   public static void show()
-   { System.out.println("I am static method of show");
-   }
+{ 
+    private A()
+    { System.out.println("I am private constructor");
+    }
+    public static void show()
+    { System.out.println("I am static show method..");
+    }
+  
 }
 public class UAPP
-{ public static void main(String args[])
-  {   new A();
-     A.display();
+{  public static void main(String args[])
+   {
      A.show();
-  }
+     new A();
+ 
+   }
 }

@@ -1,0 +1,29 @@
+//wap Armstrong  number ;
+
+import java.util.*;]
+public class Armstrong
+{
+public static void main(String args[])
+{
+   Scanner sc=new Scanner(System.in);
+
+    int no , count=0 , temp,p=1,sum=0 , j;
+
+   System.out.println("Enter the number");
+    no=sc.nextInt();
+  
+temp=no
+while(no!=0)
+{
+no = no / 10;
+count++;
+}
+no=Temp
+
+while(no !=0)
+{
+
+
+}
+}
+

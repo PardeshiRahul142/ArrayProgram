@@ -1,44 +1,36 @@
-//using another logic to find the armstrong number
 import java.util.*;
 public class ArmAPP
 {
-  public static void main(String args[])
-  {
-  Scanner sc=new Scanner(System.in);
-  System.out.print("Enter the number ");
-  int num = sc.nextInt();
-  int count=0,p,j,sum=0;
-  int temp = num;
-  while(num !=0)
-  {
-  num = num/10;
-  count++;
-  }
-  num=temp;
-  while(num !=0)
-  {
-   int rem = num % 10 ; 
-   num = num / 10;
-   p=1;
-   j=1;
-   
-   while(j<=count)
+   public static void main(String args[])
    {
-   p=p*rem;
-   j++;
-   }
-    
-  sum= sum+p;
-  }
-  if(sum== temp)
-  {
-	  System.out.print("the number is armstrong:");
-  }
-  else
-  {
-	  System.out.print("The number is not arstrong");
-  }
-  }
-  }
+     int num=153;
+     int temp=num;
+     int count=0;
+     int sum=0;
+     
+     while(num != 0)
+     {
+        num=num/10;
+       count++;
+     }//while
    
-  
+     temp=num;
+      while(temp > 0)
+      {
+          int rem=temp%10; 
+          int p=1;
+          int j=1;
+          while(j<=count)
+          {
+             p=p*rem;
+            
+             j++;
+          }
+         sum=sum+p;
+         temp/=10;
+      }
+         System.out.println(num);
+         String res=(sum==num) ?"Number is palindrome":"Number is not palindrome";
+         System.out.println(res);
+   }//main
+}//class

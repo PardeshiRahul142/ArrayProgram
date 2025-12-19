@@ -22,6 +22,13 @@ class Table
          System.out.println(e);
       }
    }
+ 
+  public synchronized void recallThread()
+  {
+  
+          try{ notify() }
+          catch(InterruptedException e){System.out.println(e);}
+  }
 }
 class Two extends Thread
 {

@@ -1,23 +1,36 @@
 import java.util.*;
 public class ARAPP
-{
-   public static void main(String args[])
-   {
-     Runnable ru=()->{
-                 try{
-                     for(int i=0;i<5;i++)
-                     {
-                      System.out.println("i"+i);
-                      Thread.sleep(1000);
-                     }
-                    }//try
-                   catch(InterruptedException e)
-                   {
-                    System.out.println(""+e);
-                   }//catch
+{ public static void main(String args[])
+  {
+       Scanner sc=new Scanner(System.in);
+       System.out.println("Enter the size of array :");
+       int n=sc.nextInt();
+       int a[]=new int[n];
+       
+       System.out.println("Enter the elements in array ");
+       for(int i=0;i<n;i++)
+       { a[i]=sc.nextInt();
+       }
+       for(int i=0;i<a.length;i++)
+       { System.out.println(a[i]);
+       }
+       int max=Integer.MIN_VALUE;
+       int smax=Integer.MIN_VALUE;
+      for(int i=0;i<a.length;i++)
+      { if(a[i] > max)
+        {
+          max=a[i];
+        }
+        
+      }
+      for(int i=0;i<a.length;i++)
+      { if(a[i] > smax && max != a[i] )
+        {
+          smax=a[i];
+        }
+      } 
       
-     };//anonymous class
-    Thread t=new Thread(ru);
-    t.start();
-   }//main
-}//class
+     System.out.println("Max element is "+max);
+     System.out.println("Second max element is "+smax);
+  }
+}
